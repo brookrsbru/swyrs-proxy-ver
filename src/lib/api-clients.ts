@@ -279,7 +279,7 @@ export class MagentoClient {
         appendComment: true,
         comment: {
           extension_attributes: {},
-          comment: "Shipment created via Sawyer-Ship-PROXY",
+          comment: "Shipment created via swyrs-proxy-ver",
           is_visible_on_front: 1
         },
         tracks: tracks.map(t => ({
@@ -366,8 +366,8 @@ export class UPSClient {
       headers: {
         'Authorization': `Bearer ${token}`,
         'Content-Type': 'application/json',
-        'transId': `sawyer-${Date.now()}`,
-        'transactionSrc': 'Sawyer-Ship-PROXY'
+        'transId': `swyrs-${Date.now()}`,
+        'transactionSrc': 'swyrs-proxy-ver'
       }
     });
 
@@ -513,7 +513,7 @@ export class FedExClient {
     const token = await this.getAccessToken();
     const url = `${this.getProxyUrl()}${this.baseUrl}/track/v1/trackingnumbers`;
     
-    const transactionId = `sawyer-${Date.now()}`;
+    const transactionId = `swyrs-${Date.now()}`;
     
     const trackBody: any = {
       trackingInfo: [{ 
