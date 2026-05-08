@@ -55,7 +55,7 @@ export default function Settings({
   const [formData, setFormData] = useState<SawyerCredentials>(credentials);
   const [isSaving, setIsSaving] = useState(false);
   const [pendingImportData, setPendingImportData] = useState<string | null>(null);
-  const [devOrderId, setDevOrderId] = useState(() => localStorage.getItem('sawyer_last_search') || '');
+  const [devOrderId, setDevOrderId] = useState(() => localStorage.getItem('swyrs_last_search') || '');
   const [devOrderData, setDevOrderData] = useState<any>(null);
   const [isDevLoading, setIsDevLoading] = useState(false);
 
@@ -130,7 +130,7 @@ export default function Settings({
       const url = URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
-      link.download = `sawyer-ship-${new Date().toISOString().split('T')[0]}.json`;
+      link.download = `swyrs-proxy-ver-${new Date().toISOString().split('T')[0]}.json`;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);

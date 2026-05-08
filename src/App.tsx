@@ -160,7 +160,7 @@ function LockScreen({ onUnlock, onReset, hasStoredData }: { onUnlock: (pw: strin
           <div className="mx-auto w-12 h-12 bg-zinc-900 rounded-xl flex items-center justify-center mb-4">
             <Lock className="text-white w-6 h-6" />
           </div>
-          <CardTitle className="text-2xl font-bold">Sawyer-Ship</CardTitle>
+          <CardTitle className="text-2xl font-bold">swyrs-proxy-ver</CardTitle>
           <CardDescription>
             {hasStoredData 
               ? "Enter your master password to unlock your credentials." 
@@ -180,7 +180,7 @@ function LockScreen({ onUnlock, onReset, hasStoredData }: { onUnlock: (pw: strin
               {error && <p className="text-xs text-red-500">Invalid password. Please try again.</p>}
             </div>
             <Button type="submit" className="w-full bg-zinc-900 hover:bg-zinc-800">
-              {hasStoredData ? "Unlock" : "Setup Sawyer-Ship"}
+              {hasStoredData ? "Unlock" : "Setup swyrs-proxy-ver"}
             </Button>
           </form>
 
@@ -231,7 +231,7 @@ function Layout({ onLogout }: { onLogout: () => void }) {
             <div className="w-8 h-8 bg-zinc-900 rounded-lg flex items-center justify-center">
               <Package className="text-white w-5 h-5" />
             </div>
-            <span>Sawyer-Ship</span>
+            <span>swyrs-proxy-ver</span>
           </div>
         </div>
         

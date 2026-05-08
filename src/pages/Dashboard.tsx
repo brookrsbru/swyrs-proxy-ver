@@ -13,7 +13,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, Di
 import { motion, AnimatePresence } from 'motion/react';
 
 export default function Dashboard({ credentials }: { credentials: SawyerCredentials }) {
-  const [searchQuery, setSearchQuery] = useState(() => localStorage.getItem('sawyer_last_search') || '');
+  const [searchQuery, setSearchQuery] = useState(() => localStorage.getItem('swyrs_last_search') || '');
   const [orders, setOrders] = useState<MagentoOrder[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [showHelp, setShowHelp] = useState(false);
@@ -21,7 +21,7 @@ export default function Dashboard({ credentials }: { credentials: SawyerCredenti
   const navigate = useNavigate();
 
   useEffect(() => {
-    localStorage.setItem('sawyer_last_search', searchQuery);
+    localStorage.setItem('swyrs_last_search', searchQuery);
   }, [searchQuery]);
 
   const handleSearch = async (e: React.FormEvent) => {
